@@ -1,0 +1,17 @@
+<a class="back">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+</a>
+<div class="info-image">
+    <img src="{{ property?.propertyImageUrl }}" alt="">
+</div>
+<div class="property-info">
+    <h4 class="heading-4">{{ property?.propertyAddress }}</h4>
+    <span class="type">{{ property?.propertyType }}</span>
+    <div class="more">
+        <span>{{ property?.numberOfBedrooms }}</span>
+        <span>{{ property?.numberOfBathrooms }}</span>
+        <span>{{ property?.squareMeters }}m</span>
+    </div>
+    <span class="price">${{ property?.price }}</span>
+</div>
+<button class="call">Call owner</button>

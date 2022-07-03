@@ -1,0 +1,36 @@
+<div class="search">
+    <label for="search">
+        <ion-icon name="search-outline"></ion-icon>
+    </label>
+    <input id="search" type="text" placeholder="Search">
+</div>
+
+<div class="listing-actions">
+    <h1 class="heading-1">All listings</h1>
+    <div class="actions">
+        <span>Filter</span>
+    </div>
+</div>
+
+<div class="listings">
+    <div class="listing-element" *ngFor="let property of propertiesList">
+        <div class="listing__description">
+            <div class="listing__heading">
+                <h4 class="heading-4">{{ property.propertyAddress }}</h4>
+                <span class="dash">&mdash;</span>
+                <span class="type">{{ property.propertyType }}</span>
+            </div>    
+            <div class="listing__info">
+                <span>{{ property.numberOfBedrooms }} bedrooms</span>
+                <span class="circle">&#11044;</span>
+                <span>{{ property.numberOfBathrooms }} bathrooms</span>
+                <span class="circle">&#11044;</span>
+                <span>{{ property.squareMeters }}m</span>
+            </div>
+            <div class="listing__footer">
+                <span class="price">${{property.price}}</span>
+                <span class="date">${{property.timeAdded}}</span>
+            </div>
+        </div>
+    </div>
+</div>
